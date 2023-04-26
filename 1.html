@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Employee Form</title>
+    <script src="https://unpkg.com/flutter@latest/build/web/flutter_web.js"></script>
+    <script src="main.dart.js"></script>
+  </head>
+  <body>
+    <div id="flutter-container"></div>
+    <script>
+      flutterEmbedding = new FlutterWebWidget.Embedder('flutter-container', {
+        initialRoute: '/',
+        routes: {
+          '/': (_) => new FlutterWebWidget.WidgetApp(
+            home: new EmployeeForm(),
+          ),
+        },
+      });
+    </script>
+  </body>
+</html>
